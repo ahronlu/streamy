@@ -1,8 +1,11 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import { Field, reduxForm } from "redux-form";
-import { Button, Form, Header, Message } from "semantic-ui-react";
+import { Button, Form, Message } from "semantic-ui-react";
+import { createStream } from "../../actions";
 
 const StreamCreate = (props) => {
+  const dispatch = useDispatch();
   const renderError = ({ error, touched }) => {
     if (touched && error) {
       return (
@@ -24,7 +27,7 @@ const StreamCreate = (props) => {
   };
 
   const onSubmit = (formValues) => {
-    console.log(formValues);
+    dispatch(createStream(formValues));
   };
 
   return (
