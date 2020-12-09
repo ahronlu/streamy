@@ -1,16 +1,17 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Container } from "semantic-ui-react";
-import Header from "./Components/Header";
 import StreamCreate from "./Components/streams/StreamCreate";
 import StreamDelete from "./Components/streams/StreamDelete";
 import StreamEdit from "./Components/streams/StreamEdit";
 import StreamList from "./Components/streams/StreamList";
 import StreamShow from "./Components/streams/StreamShow";
+import Header from "./Components/Header";
+import history from "./history";
 
 const App = () => {
   return (
-    <Router>
+    <Router history={history}>
       <Header />
       <Container>
         <Switch>
