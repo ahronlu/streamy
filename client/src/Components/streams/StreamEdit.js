@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Loader } from "semantic-ui-react";
-import { fetchStream } from "../../actions";
+import { editStream, fetchStream } from "../../actions";
+import StreamForm from "./StreamForm";
 
 const StreamEdit = ({ match }) => {
   const dispatch = useDispatch();
@@ -14,9 +15,18 @@ const StreamEdit = ({ match }) => {
     dispatch(fetchStream(match.params.id));
   }, [dispatch]);
 
+  const onSubmit = (formValues) => {
+    dispatch(editStream(match.params.id, formValues));
+  };
+
   return (
     <>
       <h3>Edit a Stream</h3>
+      {!stream ? (
+        <Loader active />
+      ) : (
+        <StreamForm initialValues={stream} onSubmit={onSubmit} />
+      )}
     </>
   );
 };
