@@ -41,7 +41,7 @@ const StreamList = () => {
         ))}
       </List>
       {auth.isSignedIn && (
-        <Button as={Link} to="/streams/new">
+        <Button as={Link} primary to="/streams/new" floated="right">
           Create Stream
         </Button>
       )}
