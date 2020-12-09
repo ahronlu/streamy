@@ -18,8 +18,12 @@ const StreamList = () => {
     if (stream.userId === auth.userId) {
       return (
         <div className="right floated content">
-          <Button primary>Edit</Button>
-          <Button negative>Delete</Button>
+          <Button as={Link} to={`/streams/edit/${stream.id}`} primary>
+            Edit
+          </Button>
+          <Button as={Link} to={`/streams/delete/${stream.id}`} negative>
+            Delete
+          </Button>
         </div>
       );
     }
