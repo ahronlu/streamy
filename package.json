@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "redux-form": "^8.3.7",
-    "redux-thunk": "^2.3.0"
-  }
-}
