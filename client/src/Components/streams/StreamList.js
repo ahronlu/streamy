@@ -9,7 +9,6 @@ const StreamList = () => {
 
   const streams = useSelector((state) => Object.values(state.streams));
   const auth = useSelector((state) => state.auth);
-  console.log(auth);
 
   useEffect(() => {
     dispatch(fetchStreams());

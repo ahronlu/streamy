@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Router, Switch, Route } from "react-router-dom";
 import { Container } from "semantic-ui-react";
 import StreamCreate from "./Components/streams/StreamCreate";
 import StreamDelete from "./Components/streams/StreamDelete";
