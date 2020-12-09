@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import { Button, Icon, Item, List } from "semantic-ui-react";
 import { fetchStreams } from "../../actions";
 
@@ -39,6 +40,11 @@ const StreamList = () => {
           </Item>
         ))}
       </List>
+      {auth.isSignedIn && (
+        <Button as={Link} to="/streams/new">
+          Create Stream
+        </Button>
+      )}
     </div>
   );
 };
