@@ -1,16 +1,3 @@
 {
-  "streams": [
-    {
-      "title": "koftov",
-      "description": "koftov",
-      "userId": "113017389949870293465",
-      "id": 1
-    },
-    {
-      "title": "dd",
-      "description": "d",
-      "userId": "113017389949870293465",
-      "id": 2
-    }
-  ]
+  "streams": []
 }
