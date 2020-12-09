@@ -14,7 +14,11 @@ const StreamEdit = ({ match }) => {
     dispatch(fetchStream(match.params.id));
   }, [dispatch]);
 
-  return <div>{!stream ? <Loader active /> : <h1>{stream.id}</h1>}</div>;
+  return (
+    <>
+      <h3>Edit a Stream</h3>
+    </>
+  );
 };
 
 export default StreamEdit;
