@@ -9,7 +9,7 @@ const Header = () => {
       <Menu.Item as={Link} to="/">
         Streamy
       </Menu.Item>
-      <Menu.Item position="right" as={Link} to="/streams">
+      <Menu.Item position="right" as={Link} to="/">
         All Streams
       </Menu.Item>
       <Menu.Item>

@@ -1,3 +1,9 @@
 {
-  "streams": []
+  "streams": [
+    {
+      "title": "koftov",
+      "description": "koftov",
+      "id": 1
+    }
+  ]
 }
