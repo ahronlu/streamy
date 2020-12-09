@@ -1,3 +1,4 @@
+import _ from "lodash";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Loader } from "semantic-ui-react";
@@ -25,7 +26,10 @@ const StreamEdit = ({ match }) => {
       {!stream ? (
         <Loader active />
       ) : (
-        <StreamForm initialValues={stream} onSubmit={onSubmit} />
+        <StreamForm
+          initialValues={_.pick(stream, "title", "description")}
+          onSubmit={onSubmit}
+        />
       )}
     </>
   );
