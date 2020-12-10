@@ -14,7 +14,7 @@ const StreamEdit = ({ match }) => {
 
   useEffect(() => {
     dispatch(fetchStream(match.params.id));
-  }, [dispatch]);
+  }, [dispatch, match]);
 
   const onSubmit = (formValues) => {
     dispatch(editStream(match.params.id, formValues));
